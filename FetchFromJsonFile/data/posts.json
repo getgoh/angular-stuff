@@ -1,0 +1,14 @@
+[
+  { 
+    "id": 1,
+    "title": "First post (about cake)",
+    "description": "This is the first post. Cake. 'Nuff said.",
+    "imgUrl": "images/cake.jpg"
+  },
+  { 
+    "id": 2,
+    "title": "Second post (tentacles, anyone?)",
+    "description": "This is the second post. Below is an image of a big, scary kraken!",
+    "imgUrl": "images/kraken.png"
+  }
+]

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-app="MyApp">
+  <div ng-controller="PostsCtrl">
+    <ul ng-repeat="post in posts">
+      <li>
+        <h3>{{post.title}}</h3>
+        <p>{{post.description}}</p>
+        <img style="height:100px;width=auto" src="{{post.imgUrl}}" />
+      </li>    
+    </ul>
+  </div>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>

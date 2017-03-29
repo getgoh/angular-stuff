@@ -5,14 +5,14 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-app="MyApp">
-  <div ng-controller="RecordsCtrl">
-    <div ng-repeat="record in returnData.records">
+  <div ng-controller="EstablishmentsCtrl">
+    <div ng-repeat="est in returnData.results">
       
-      <span style="color:blue">{{record.Name}}</span>
+      <span style="color:blue">{{est.name}}</span>
       <br/>
-      City: {{record.City}}
+      Address: {{est.vicinity}}
       <br/>
-      Country: {{record.Country}}
+      Map: <div ng-bind-html="renderHtml(est.photos[0].html_attributions[0])"></div>
       <br/><br/>
           
     </div>

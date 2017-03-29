@@ -1,27 +1,12 @@
 var app = angular.module("MyApp", []);
 
-// some common configs for angularJS
-app.config(['$httpProvider', function($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        $httpProvider.defaults.withCredentials = true;
-        delete $httpProvider.defaults.headers.common["X-Requested-With"];
-        $httpProvider.defaults.headers.common["Accept"] = "application/json";
-        $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-    }
-]);
 
-app.controller("EstablishmentsCtrl", ['$scope', '$http', '$sce', function($scope, $http, $sce) 
+app.controller("RecordsCtrl", ['$scope', '$http', function($scope, $http) 
 {
-  $http.defaults.headers.common["X-Custom-Header"] = "Angular.js";
+  // this prohibits us from accessing remote sources
+  //$http.defaults.headers.common["X-Custom-Header"] = "Angular.js";
 
-
-    $scope.renderHtml = function (htmlCode) {
-          return $sce.trustAsHtml(htmlCode);
-      };
-
-
-  // this data is a sample fetched from Google Places API
-  var testLink = "data/establishments.json";
+  var testLink = "https://www.w3schools.com/angular/customers.php";
 
   $http.get(testLink)
     .then(function(data) {
